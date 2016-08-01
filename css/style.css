@@ -4,11 +4,12 @@
 
 @font-face {
 	font-family: 'League Gothic';
-	src: local('League Gothic'), local('LeagueGothic'),
-	url('../fonts/leaguegothic.woff2') format('woff2'),
-	url('../fonts/leaguegothic.woff') format('woff'), 
-	url('../fonts/leaguegothic.ttf') format('truetype');
-	font-weight: 400;
+	src: url('../fonts/leaguegothic-webfont.eot');
+	src: url('../fonts/leaguegothic-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/leaguegothic-webfont.woff2') format('woff2'),
+	url('../fonts/leaguegothic-webfont.woff') format('woff'),
+	url('../fonts/leaguegothic-webfont.ttf') format('truetype');
+	font-weight: normal;
 	font-style: normal;
 }
 
@@ -46,6 +47,7 @@ a {
 **************************************************************************************/
 
 header {
+	
 	background: url("../img/header-background.jpg") no-repeat center center;
 	background-size: cover;
 	width: 100%;
@@ -171,6 +173,7 @@ nav ul li {
 	display: inline-block;
 	width: 15px;
 	height: 15px;
+	background: #000;
 	background: rgba(0, 0, 0, 0.2);
 	border-radius: 7px;
 	box-sizing: border-box;
@@ -369,6 +372,7 @@ a.slider__circle__current {
 }
 
 a.slider__circle__current--quote {
+	background: #454545;
 	background-image: linear-gradient(to top, #454545 0%, #6a6a6a 100%);
 }
 
@@ -633,8 +637,9 @@ a.slider__circle__current--quote {
 **************************************************************************************/
 
 .footer__menu {
-	background: url("../img/footer-menu.png") center center;
+	background: url("../img/footer-menu.png") no-repeat center center;
 	background-size: cover;
+	-ms-behavior: url(../js/backgroundsize.min.htc);
 	display: inline-block;
 	width: 100%;
 	padding-top: 36px;
@@ -672,3 +677,5 @@ footer nav {
 .footer__menu__designed--end {
 	font-weight: 700;
 }
+
+
